@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class JsonApi {
-    func forecastsDidFetch(fromJson json : JSON, completion: @escaping (_ forecasts : Weather) -> Void) {
+    func forecastDidFetch(fromJson json : JSON, completion: @escaping (_ forecasts : Weather) -> Void) {
         
         var finalCityName = "no_name"
         var finalShortDescription = "no_desc"

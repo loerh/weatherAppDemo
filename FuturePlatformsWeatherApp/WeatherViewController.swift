@@ -115,7 +115,7 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate {
             
             // Transform json into a "Weather" object
             let jsonApi = JsonApi()
-            jsonApi.forecastsDidFetch(fromJson: json) { (weather) in
+            jsonApi.forecastDidFetch(fromJson: json) { (weather) in
                 
                 //Storing fetched info in UserDefaults
                 self.userDefaultsApi.updateBackup(weather: weather)

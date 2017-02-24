@@ -23,6 +23,7 @@ class UserDefaultsApi {
         static let iconNameKey = "iconName"
     }
     
+    // fetching current backup of last remote api request (if existing)
     func getBackup() -> Weather? {
         let defaults = UserDefaults.standard
         if let name = defaults.string(forKey: UserDefaultsApiConstants.nameKey),
@@ -36,7 +37,7 @@ class UserDefaultsApi {
         return nil
     }
     
-        
+    // updating or creating new backup of latest remote api request 
     func updateBackup(weather : Weather) {
         
         let defaults = UserDefaults.standard
